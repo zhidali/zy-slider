@@ -1,4 +1,14 @@
 <view >
-    <zy-slider wx:for="{{5}}" />
-    <zujian />
+    <!-- <zy-slider wx:for="{{5}}" />
+    <zujian /> -->
+
+    <view class="btn-view" catchtap="clickView">
+        RED
+    </view>
+    <view class="btn-view blue" catchtap="tabCity">
+        切换城市
+    </view>
+    <view class="btn-view green" catchtap="closeDialog">
+        关闭弹窗
+    </view>
 </view>

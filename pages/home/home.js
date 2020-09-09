@@ -5,42 +5,22 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-  },
+  data: {},
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.makeWatcher('a', (n) => {
-      console.log('home', n)
-      // this.setData({
-      //   a: n
-      // })
-    })
+
   },
 
-  lowValueChangeAction: function (e) {
-  },
+  lowValueChangeAction: function (e) {},
 
-  heighValueChangeAction: function (e) {
-  },
+  heighValueChangeAction: function (e) {},
 
-  lowValueChangeAction1: function (e) {
-  },
+  lowValueChangeAction1: function (e) {},
 
-  heighValueChangeAction1: function (e) {
-  },
-
-  hideSlider: function (e) {
-  },
-
-  showSlider: function (e){
-  },
-
-  resetSlider: function (e){
-  },
-
+  heighValueChangeAction1: function (e) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -89,5 +69,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  clickView() {
+    // app.dialogMapData('set', 'home-nocity');
+    // app.dialogMapData('dialog')
+
+    // app.dialogMapData('set', 'home-ground');
+
+    // console.log('home-nocity', app.dialogMapData('get', 'home-nocity'), 'city_id:' + app.commonData.city.city_id);
+
+    // console.log('home-ground', app.dialogMapData('get', 'home-ground'), 'city_id:' + app.commonData.city.city_id);
+  },
+  tabCity() {
+    console.log('status:' + app.dialogMapData('status'));
+    console.log('dialog:' + app.dialogMapData('dialog'));
+    app.commonData.city.city_id = app.commonData.city.city_id == '2' ? '3' : '2'
+  },
+  closeDialog() {
+    app.dialogMapData('close');
   }
 })
