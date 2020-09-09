@@ -1,4 +1,5 @@
 { "usingComponents": {
-      "zy-slider": "../../component/zyslider"
+      "zy-slider": "../../component/zyslider",
+      "zujian": "../../component/zujian/zujian"
   },
   "navigationBarTitleText": "zy-slider"}

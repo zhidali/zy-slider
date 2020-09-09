@@ -1,60 +1,44 @@
 // pages/home/home.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    low: 0,
-    heigh: 100,
-    low1: 200,
-    heigh1: 500
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    app.makeWatcher('a', (n) => {
+      console.log('home', n)
+      // this.setData({
+      //   a: n
+      // })
+    })
   },
 
   lowValueChangeAction: function (e) {
-    this.setData({
-      low: e.detail.lowValue
-    })
   },
 
   heighValueChangeAction: function (e) {
-    this.setData({
-      heigh: e.detail.heighValue
-    })
   },
 
   lowValueChangeAction1: function (e) {
-    this.setData({
-      low1: e.detail.lowValue
-    })
   },
 
   heighValueChangeAction1: function (e) {
-    this.setData({
-      heigh1: e.detail.heighValue
-    })
   },
 
   hideSlider: function (e) {
-    this.selectComponent("#zy-slider").hide()
-    this.selectComponent("#zy-slider1").hide()
   },
 
   showSlider: function (e){
-    this.selectComponent("#zy-slider").show()
-    this.selectComponent("#zy-slider1").show()
   },
 
   resetSlider: function (e){
-    this.selectComponent("#zy-slider").reset()
-    this.selectComponent("#zy-slider1").reset()
   },
 
 
